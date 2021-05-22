@@ -1,0 +1,943 @@
+/* google font link */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Oswald:wght@200;300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+sub,
+li,
+sup {
+    font-family: 'Oswald', sans-serif;
+
+}
+
+p,
+span {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: var(--primaryBgColor);
+    color: var(--primaryTextColor);
+}
+
+/* color css */
+:root {
+    --primaryBgColor: #FF1313;
+    --primaryTextColor: #fff;
+    --navBarBgColor: #000;
+    --secondaryColor: #828080;
+    --overlayColor: rgba(0, 0, 0, 0.5);
+    --offerBgColor: #022345;
+    --hTextColor: #2C234D;
+    --boxBgColor: #F7FDFF;
+    --fbIconColor: #4C68AA;
+    --twIconColor: #2EAADA;
+    --instaIconColor: #DC294D;
+    --linkedIconColor: #1376B3;
+}
+
+
+/* header css */
+nav.navbar {
+    line-height: 3rem;
+    background-color: var(--navBarBgColor) !important;
+}
+
+a.navbar-brand {
+    font-size: 2.5rem;
+    color: var(--primaryTextColor);
+}
+
+a.nav-link {
+    font-size: 1.6rem;
+    color: var(--primaryTextColor);
+    margin: 2rem 2rem;
+    transition: all .5s ease;
+}
+a.nav-link:hover{
+    color: var(--primaryBgColor);
+}
+/* header btn css */
+
+.navBtn a.nBtn {
+    background: var(--primaryBgColor);
+    color: var(--primaryTextColor);
+    padding: 1.5rem 3rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: inline-block;
+    z-index: 1;
+    border-radius: .5rem;
+    transition: all .5s ease;
+    font-size: 1.8rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+.navBtn a.nBtn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primaryTextColor);
+    transform: translateX(-100%);
+    transition: all .5s ease;
+    z-index: -1;
+}
+
+.navBtn a.nBtn:hover::before {
+    transform: translateX(0);
+}
+
+.navBtn a.nBtn:hover {
+    color: var(--primaryBgColor);
+}
+
+/* slider css */
+.banner_section {
+    background: url("./images/banner1.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20rem 0;
+}
+
+img {
+    width: 100%;
+}
+
+figure img {
+    max-width: 36rem;
+    height: 39rem;
+}
+
+.about {
+    margin-top: 10rem;
+
+}
+
+.hTitle {
+    position: relative;
+}
+
+h5.hsubtitle {
+    color: var(--primaryBgColor);
+    font-size: 2rem;
+    margin-left: 6.5rem;
+}
+
+.hTitle h2 {
+    font-size: 6rem;
+    width: 60rem;
+    margin-bottom: 5rem;
+    font-weight: 600;
+    padding: 1rem 0;
+}
+
+h5.hsubtitle::before {
+    content: "";
+    position: absolute;
+    top: 1.4rem;
+    left: 1rem;
+    width: 5rem;
+    border-bottom: .2rem solid var(--primaryBgColor);
+}
+
+/* about section one css */
+.about_section {
+    padding: 5rem 0;
+}
+
+.hTitle {
+    position: relative;
+}
+
+h4.aTitle {
+    font-size: 5rem;
+    line-height: 1.5;
+    margin-bottom: 4rem;
+    color: var(--hTextColor);
+}
+
+.aboutContent p.aContentOne {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    font-weight: 600;
+    width: 60rem;
+    color: var(--secondaryColor);
+}
+
+.aboutContent p.aContentTwo {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.9;
+    margin-bottom: 5rem;
+    color: var(--secondaryColor);
+}
+
+/* about section Two css */
+.about_sectionTwo {
+    padding: 5rem 0;
+}
+
+h4.aTwoTitle {
+    font-size: 5rem;
+    line-height: 1.5;
+    margin-bottom: 4rem;
+    color: var(--hTextColor);
+}
+
+.aboutTwoContent p.aTwoContentOne {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    font-weight: 600;
+    width: 60rem;
+    color: var(--secondaryColor);
+}
+
+.aboutTwoContent p.aTwoContentTwo {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.9;
+    margin-bottom: 5rem;
+    color: var(--secondaryColor);
+}
+
+figure.aboutTwoImg img {
+    width: 90%;
+}
+
+/* service section css */
+.our_service_section {
+    background: url("./images/section_bg01.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 80rem;
+    margin-bottom: 5rem;
+    padding: 5rem 0;
+}
+
+.service {
+    background-color: var(--primaryTextColor);
+    text-align: center;
+    padding: 6rem;
+    margin-right: .5rem;
+    box-sizing: border-box;
+}
+
+.service span {
+    display: block;
+}
+
+.service span i {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+    height: 8rem;
+    width: 8rem;
+    background: var(--secondaryColor);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: var(--primaryBgColor);
+    transition: all .5s ease;
+}
+
+.serviceWrapper:hover span i {
+    background-color: var(--primaryBgColor);
+    color: var(--primaryTextColor);
+}
+
+h4.sTitle {
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 5rem;
+    margin-top: 4rem;
+}
+
+h2.serviecSubTitle {
+    font-size: 2.5rem;
+    padding: 2rem 0;
+}
+
+p.sContent {
+    font-size: 1.6rem;
+    line-height: 1.9;
+    width: 30rem;
+    margin: auto;
+    margin-bottom: 5rem;
+    font-weight: 500;
+    color: var(--secondaryColor);
+}
+
+.serviceWrapper {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.serviceWrapper .serviceContent {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 99%;
+    height: 20%;
+    background: var(--primaryBgColor);
+    color: var(--primaryTextColor);
+    transition: all .5s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleY(0);
+    transform-origin: bottom center;
+}
+
+.serviceWrapper:hover .serviceContent {
+    transform: scaleY(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+.serviceWrapper .serviceContent h5 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 3rem;
+    color: var(--primaryTextColor);
+}
+
+.serviceWrapper .serviceContent h5 strong {
+    margin-left: 3rem;
+    font-size: 1.6rem;
+}
+
+/* img gallery css */
+.workerGallery {
+    padding: 5rem 0;
+}
+
+.workerBigImg {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.bigImgContent {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 98%;
+    background-color: var(--overlayColor);
+    color: var(--primaryTextColor);
+    transition: all .5s ease;
+}
+
+.workerBigImg:hover .bigImgContent {
+    left: 0;
+}
+
+.bigImgContent h3 {
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--primaryTextColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35%;
+    transition: all .5s ease;
+}
+
+.bigImgContent span {
+    font-size: 1.6rem;
+    margin-left: 42%;
+    font-weight: 500;
+    color: var(--primaryTextColor);
+    transition: all .5s ease;
+}
+
+.bigImgContent strong {
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    background: var(--primaryBgColor);
+    color: var(--primaryTextColor);
+    border-radius: 5rem;
+    font-size: 2rem;
+    line-height: 8rem;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 25rem;
+    transition: all .5s ease;
+}
+
+.bigImgContent strong:hover {
+    background-color: var(--primaryTextColor);
+    color: var(--primaryBgColor);
+}
+
+/* small img css */
+.workerSmallImg {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.smallImgContent {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 98%;
+    background-color: var(--overlayColor);
+    color: var(--primaryTextColor);
+    transition: all .5s ease;
+}
+
+.workerSmallImg:hover .smallImgContent {
+    left: 0;
+}
+
+.smallImgContent h3 {
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--primaryTextColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30%;
+    transition: all .5s ease;
+}
+
+.smallImgContent span {
+    font-size: 1.6rem;
+    margin-left: 42%;
+    font-weight: 500;
+    color: var(--primaryTextColor);
+    transition: all .5s ease;
+}
+
+.smallImgContent strong {
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    background: var(--primaryBgColor);
+    color: var(--primaryTextColor);
+    border-radius: 5rem;
+    font-size: 2rem;
+    line-height: 8rem;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 10rem;
+    transition: all .5s ease;
+}
+
+.smallImgContent strong:hover {
+    background-color: var(--primaryTextColor);
+    color: var(--primaryBgColor);
+}
+
+/* team member section */
+.teamMemberSection {
+    padding: 5rem 0;
+}
+
+.tTitle h4 {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 5rem;
+    margin-top: 4rem;
+    color: var(--hTextColor);
+}
+
+.tSubBtn {
+    margin-top: 17rem;
+    margin-left: 10rem;
+}
+
+.teamMamberImg {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.teamSubTitle {
+    font-size: 2rem;
+    color: var(--primaryTextColor);
+    line-height: 1.5;
+}
+
+.teamContentone {
+    position: relative;
+    top: -11rem;
+    left: 4rem;
+    transition: all .5s ease;
+    width: 100%;
+    height: 100%;
+}
+
+/* .teamContentone:hover{
+    margin-top: 2rem;
+    background-color: var(--primaryBgColor);
+} */
+.teamContent {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    background: var(--primaryBgColor);
+    color: var(--primaryTextColor);
+    width: 100%;
+    height: 20%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease;
+    transform: scale(0);
+    transform-origin: bottom center;
+
+}
+
+.teamMamberImg:hover .teamContent {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+ul.list li a {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    position: relative;
+    top: 4rem;
+    left: 4rem;
+    color: var(--primaryBgColor);
+    width: 5rem;
+    height: 5rem;
+    background: var(--primaryTextColor);
+    display: block;
+    border-radius: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    transition: all .5s ease;
+    border: transparent;
+}
+
+ul.list li a:hover {
+    background-color: transparent;
+    border: .1rem solid var(--primaryTextColor);
+    color: var(--primaryTextColor);
+}
+
+/* memberOfferSection css */
+.memberOfferSection {
+    padding-top: 3rem;
+    background-color: var(--offerBgColor);
+    margin-bottom: 5rem;
+    padding-bottom: 10rem;
+}
+
+.oTitle h4 {
+    font-size: 6rem;
+    color: var(--primaryTextColor);
+}
+
+.OSubBtn {
+    position: relative;
+    left: 10rem;
+    top: 10rem;
+}
+
+/* select time section css one */
+.timeSectionTitle {
+    padding: 5rem 0;
+}
+
+h5.selectSubtitle {
+    font-size: 2rem;
+    color: var(--primaryBgColor);
+}
+
+h5.selectSubtitle::before {
+    content: "";
+    position: absolute;
+    top: 1.3rem;
+    left: 50rem;
+    width: 5rem;
+    border-bottom: .2rem solid var(--primaryBgColor);
+}
+
+.selectheader {
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-top: 2rem;
+    color: var(--hTextColor);
+}
+
+/* select time section css two */
+
+.selectTimeWrapper {
+    width: 100rem;
+    margin: auto;
+    transition: all .5s ease;
+}
+
+.timeBoxWrapper {
+    width: 100rem;
+    margin: auto;
+    transition: all .5s ease;
+    margin-bottom: 5rem;
+}
+
+.selectTimeList ul li {
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 2rem 3rem;
+    display: inline-block;
+    transition: all .5s ease;
+    color: var(--hTextColor);
+    background-color: var(--boxBgColor);
+}
+
+.selectTimeList ul li.active {
+    background: var(--primaryBgColor);
+    color: var(--primaryTextColor);
+}
+
+.selectTimeList ul li:hover {
+    background: var(--primaryBgColor);
+    color: var(--primaryTextColor);
+}
+
+.timeBox {
+    margin: 1rem;
+    padding: 2rem;
+    text-align: center;
+    color: var(--primaryTextColor);
+    background-color: var(--boxBgColor);
+    transition: all .5s ease;
+}
+
+.timeBox:hover {
+    background-color: var(--primaryBgColor);
+    color: var(--primaryTextColor);
+}
+
+.timeBoxWrapper .active {
+    background: var(--primaryBgColor);
+    color: var(--primaryTextColor);
+}
+
+.timeBoxWrapper span.active {
+    background-color: var(--primaryTextColor);
+    color: var(--navBarBgColor);
+}
+
+h5.active {
+    color: var(--primaryTextColor);
+}
+
+p.active {
+    color: var(--primaryTextColor);
+}
+
+.timeBox span {
+    font-size: 1.2rem;
+    background: var(--navBarBgColor);
+    color: var(--primaryTextColor);
+    padding: .8rem;
+    margin-top: 1rem;
+    display: block;
+    width: 10rem;
+    margin: auto;
+    transition: all .5s ease;
+}
+
+.timeBox:hover span {
+    background-color: var(--primaryTextColor);
+    color: var(--navBarBgColor);
+}
+
+.timeBox h5 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem 0;
+    line-height: 1.5;
+    color: var(--hTextColor);
+    transition: all .5s ease;
+}
+
+.timeBox:hover h5 {
+    color: var(--primaryTextColor);
+}
+
+.timeBox:hover p {
+    color: var(--primaryTextColor);
+}
+
+.timeBox p {
+    font-size: 1.6rem;
+    text-align: center;
+    color: var(--secondaryColor);
+    margin-bottom: 1rem;
+    transition: all .5s ease;
+}
+
+/* input box section css */
+
+.inputBoxWrapper {
+    background-color: var(--boxBgColor);
+    padding: 5rem;
+}
+
+.conTitle h4 {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 5rem;
+    margin-top: 1rem;
+    color: var(--hTextColor);
+}
+
+input.form-control {
+    font-size: 1.5rem;
+    padding: 1.4rem 1rem;
+}
+
+input.form-control {
+    font-size: 1.5rem;
+    padding: 1.4rem 1rem;
+}
+
+select.form-select {
+    font-size: 1.6rem;
+}
+
+/* select#specificSizeSelect {
+    padding: 2rem;
+    font-size: 2rem;
+} */
+
+textarea#floatingTextarea {
+    font-size: 1.6rem;
+}
+
+/* blog section css */
+.blogImgSection {
+    padding: 10rem 0;
+}
+
+h5.blogSubtitle {
+    font-size: 2rem;
+    color: var(--primaryBgColor);
+}
+
+h5.blogSubtitle::before {
+    content: "";
+    position: absolute;
+    top: 1.3rem;
+    left: 48rem;
+    width: 5rem;
+    border-bottom: .2rem solid var(--primaryBgColor);
+}
+
+.blogImg {
+    position: relative;
+    overflow: hidden;
+    width: 64.2rem;
+    height: 42.5rem;
+}
+
+.blogImg img:hover {
+    transform: scale(1.1);
+}
+
+.blogImg img {
+    transition: all .9s ease;
+    width: 100%;
+}
+
+h5.blogSubContent {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--hTextColor);
+    transition: all .5s ease;
+}
+
+h5.blogSubContent:hover {
+    color: var(--primaryBgColor);
+}
+
+.blogTitle {
+    background-color: var(--boxBgColor);
+    padding: 5rem;
+}
+
+.blogImgContent {
+    position: absolute;
+    top: 77%;
+    left: 0;
+    background: red;
+    width: 11rem;
+    height: 10rem;
+    padding: 4rem;
+}
+
+.blogImgContent h3 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-top: -1.5rem;
+}
+
+.blogImgContent span {
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+/* footer section css */
+.footerSection {
+    background-image: url("./images/footer_bg03.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 5rem 0;
+    height: 50rem;
+}
+
+.footerTitle h5 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primaryTextColor);
+    margin-left: 1.5rem;
+}
+
+.footerContent ul li {
+    font-size: 1.6rem;
+    color: var(--primaryTextColor);
+    line-height: 2;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.footerContent ul li:hover {
+    margin-left: 1rem;
+    color: var(--primaryBgColor);
+}
+
+.footerContent p {
+    font-size: 1.5rem;
+    color: var(--primaryTextColor);
+}
+.footerSocial {
+    position: relative;
+    top: 3rem;
+    left: -3rem;
+}
+.footerSocial ul li a span {
+    font-size: 1.6rem;
+    color: var(--primaryBgColor);
+    margin: 0 1.5rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    background-color: var(--boxBgColor);
+    text-align: center;
+    transition: all .5s ease;
+}
+
+.footerSocial ul li a span.fion1:hover {
+    transform: rotate(360deg);
+    background-color: var(--fbIconColor);
+    color: var(--primaryTextColor);
+}
+.footerSocial ul li a span.fion2:hover {
+    transform: rotate(360deg);
+    background-color: var(--twIconColor);
+    color: var(--primaryTextColor);
+}
+.footerSocial ul li a span.fion3:hover {
+    transform: rotate(360deg);
+    background-color: var(--instaIconColor);
+    color: var(--primaryTextColor);
+}
+.footerSocial ul li a span.fion4:hover {
+    transform: rotate(360deg);
+    background-color: var(--linkedIconColor);
+    color: var(--primaryTextColor);
+}
+
+.copyRight p {
+    color: var(--primaryTextColor);
+    font-size: 1.6rem;
+}
+
+.copyRight p span {
+    color: var(--primaryBgColor);
+}
+
+.copyRight p b {
+    color: var(--primaryBgColor);
+}
+
+.copyRight {
+    position: relative;
+    top: 12rem;
+    border-top: .1rem solid var(--secondaryColor);
+}
+a.backToUp {
+    position: relative;
+    top:4rem;
+    left: 103%;
+    width: 5rem;
+    height: 5rem;
+    background: var(--primaryBgColor);
+    line-height: 5rem;
+    text-align: center;
+    display: block;
+    color: var(--primaryTextColor);
+    font-size: 1.6rem;
+    border-radius: 5rem;
+    transition: all .5s ease;
+}
+a.backToUp:hover{
+    background-color: var(--primaryTextColor);
+    color: var(--primaryBgColor);
+}
